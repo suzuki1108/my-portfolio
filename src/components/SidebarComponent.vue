@@ -1,0 +1,55 @@
+<template>
+  <aside class="sidebar">
+    <div class="sidebar-icons">
+      <fa icon="copy" class="fa-icon fa-icon_current" />
+      <a href="https://github.com/suzuki1108/">
+        <fa :icon="['fab', 'github']" class="fa-icon" />
+      </a>
+      <a href="https://techkinoko.com/">
+        <fa icon="blog" class="fa-icon" />
+      </a>
+    </div>
+  </aside>
+</template>
+
+<script setup lang="ts"></script>
+
+<style scoped>
+.sidebar {
+  width: 48px;
+  height: 94vh;
+  background-color: rgb(51, 51, 51);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-icons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  gap: 12px;
+}
+
+.sidebar-icons a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-icon {
+  font-size: 26px;
+  padding: 8px 0;
+  color: rgb(122, 122, 122);
+}
+
+.fa-icon_current {
+  color: rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+}
+
+.fa-icon:hover {
+  color: rgb(255, 255, 255);
+}
+</style>
