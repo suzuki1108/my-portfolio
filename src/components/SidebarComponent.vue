@@ -62,4 +62,8 @@ const props = defineProps({
 .fa-icon:hover {
   color: rgb(255, 255, 255);
 }
+
+.fa-icon_current:active {
+  border-left: 2px solid rgb(0, 109, 200);
+}
 </style>
