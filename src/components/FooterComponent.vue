@@ -8,8 +8,6 @@
 .footer {
   width: 100%;
   height: 24px;
-  position: absolute;
-  bottom: 0;
   background-color: rgb(0, 109, 200);
   display: flex;
   justify-content: center;

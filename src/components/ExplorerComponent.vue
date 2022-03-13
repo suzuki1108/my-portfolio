@@ -51,8 +51,11 @@ const isShowDirectory = ref(true);
 
 <style scoped>
 .explorer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   width: 300px;
-  height: 94vh;
+  height: 100vh;
   background-color: rgb(37, 37, 38);
 }
 

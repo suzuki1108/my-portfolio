@@ -27,9 +27,9 @@ const props = defineProps({
 <style scoped>
 .sidebar {
   width: 48px;
-  height: 94vh;
   background-color: rgb(51, 51, 51);
   display: flex;
+  height: 100vh;
   flex-direction: column;
 }
 

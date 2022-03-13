@@ -38,14 +38,16 @@ const sidebar_toggle = () => {
 
 <style scoped>
 .editor {
-  width: 100vw;
-  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(30, 30, 30);
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .editor__container {
