@@ -1,5 +1,5 @@
 <template>
-  <aside v-if="isShowExplorer" class="explorer">
+  <aside v-if="props.isShowExplorer" class="explorer">
     <p class="explorer__title">メニュー</p>
   </aside>
 </template>

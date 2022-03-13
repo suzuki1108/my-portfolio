@@ -1,7 +1,11 @@
 <template>
   <aside class="sidebar">
     <div class="sidebar-icons">
-      <fa icon="copy" class="fa-icon fa-icon_current" />
+      <fa
+        :icon="props.isShowExplorer ? 'xmark' : 'bars'"
+        class="fa-icon fa-icon_current"
+        @click="$emit('sidebar_toggle')"
+      />
       <a href="https://github.com/suzuki1108/">
         <fa :icon="['fab', 'github']" class="fa-icon" />
       </a>
@@ -12,7 +16,13 @@
   </aside>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { defineProps } from "vue";
+
+const props = defineProps({
+  isShowExplorer: Boolean,
+});
+</script>
 
 <style scoped>
 .sidebar {
