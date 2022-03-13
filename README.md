@@ -1,29 +1,20 @@
 # my-portfolio
 
-## Project setup
-```
-npm install
-```
+フリーランスエンジニア Suzuki.s のポートフォリオサイトです。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+VSCode 風の UI にしてみました。
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 使用技術
 
-### Run your unit tests
-```
-npm run test:unit
-```
+- Vue.js 3.x
+- TypeScript
+- script setup
+- provide inject
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 更新方法（備忘録）
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+$ cd my-portfolio
+$ npm run build
+$ git push ~~
+```
