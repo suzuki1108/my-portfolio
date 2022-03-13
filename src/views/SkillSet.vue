@@ -35,6 +35,12 @@
   </section>
 </template>
 
+<script setup lang="ts">
+import { CommonBeforeRouteEnter } from "@/Logic/CommonBeforeRouteEnter";
+
+CommonBeforeRouteEnter();
+</script>
+
 <style scoped>
 .skillset-wrapper {
   margin-top: 16px;

@@ -10,29 +10,17 @@
         >SUZUKI'S-PORTFOLIO
       </p>
       <div class="explorer__menu-item" v-if="isShowDirectory">
-        <router-link to="/" class="router-link">
-          <fa icon="file" class="fa-icon" />
-          プロフィール
-        </router-link>
-
-        <router-link to="/skillset" class="router-link">
-          <fa icon="file" class="fa-icon" />
-          スキルセット
-        </router-link>
-
-        <router-link to="/personaldevelop" class="router-link">
-          <fa icon="file" class="fa-icon" />
-          個人開発
-        </router-link>
-
-        <router-link to="/jobcareer" class="router-link">
-          <fa icon="file" class="fa-icon" />
-          職務経歴
-        </router-link>
-
-        <router-link to="/contact" class="router-link">
-          <fa icon="file" class="fa-icon" />
-          お問い合わせ
+        <router-link
+          v-for="item in display"
+          :key="item.route"
+          :to="item.route"
+          class="router-link"
+          :class="{
+            router__link_active: item.route === currentRoute,
+          }"
+          @click="addTab(item)"
+        >
+          <fa icon="file" class="fa-icon" /> {{ item.title }}
         </router-link>
       </div>
     </div>
@@ -41,12 +29,26 @@
 
 <script setup lang="ts">
 import { defineProps, ref } from "vue";
+import { Ref, inject } from "vue";
+import { Display } from "@/types/Display";
 
 const props = defineProps({
   isShowExplorer: Boolean,
 });
 
+const display = inject<Display[]>("Display");
+const displayTab = inject<Display[]>("DisplayTab");
+const currentRoute = inject<Ref<string>>("currentRoute");
+
 const isShowDirectory = ref(true);
+
+const addTab = (item: Display) => {
+  if (!displayTab) return;
+
+  if (displayTab[0].route === "/" && item.route === "/") return;
+
+  if (!displayTab.includes(item)) displayTab.push(item);
+};
 </script>
 
 <style scoped>
@@ -87,5 +89,9 @@ const isShowDirectory = ref(true);
 
 .router-link {
   color: rgb(144, 144, 144);
+}
+
+.router__link_active {
+  background-color: rgb(52, 52, 58);
 }
 </style>
