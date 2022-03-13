@@ -24,7 +24,6 @@
 import { Ref, inject } from "vue";
 import { Display } from "@/types/Display";
 
-const display = inject<Display[]>("Display");
 const displayTab = inject<Display[]>("DisplayTab");
 const currentRoute = inject<Ref<string>>("currentRoute");
 </script>
@@ -55,6 +54,8 @@ const currentRoute = inject<Ref<string>>("currentRoute");
   justify-content: center;
   align-items: center;
   border-right: 1px solid rgb(30, 30, 30);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .tab__item_active {
@@ -67,5 +68,11 @@ const currentRoute = inject<Ref<string>>("currentRoute");
 
 .fa-icon {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 480px) {
+  .tab {
+    display: none;
+  }
 }
 </style>

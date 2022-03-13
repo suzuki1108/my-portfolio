@@ -81,4 +81,11 @@ CommonBeforeRouteEnter();
   width: 50%;
   line-height: 1.5;
 }
+
+@media screen and (max-width: 480px) {
+  .about-me__description {
+    width: 80%;
+    line-height: 1.5;
+  }
+}
 </style>

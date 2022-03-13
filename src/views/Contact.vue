@@ -115,6 +115,12 @@ textarea {
   height: 200px;
 }
 
+@media screen and (max-width: 480px) {
+  textarea {
+    width: 300px;
+  }
+}
+
 input:focus,
 textarea:focus {
   outline: none;
