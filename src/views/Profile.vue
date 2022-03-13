@@ -10,7 +10,7 @@
           <span class="about-me__list-title">名前: </span>Suzuki.S
         </li>
         <li class="about-me__list-item">
-          <span class="about-me__list-title">年齢: </span>28
+          <span class="about-me__list-title">年齢: </span>{{ age() }}
         </li>
         <li class="about-me__list-item">
           <span class="about-me__list-title">住所: </span>北海道札幌市
@@ -36,6 +36,24 @@
 
 <script setup lang="ts">
 import { CommonBeforeRouteEnter } from "@/Logic/CommonBeforeRouteEnter";
+
+const age = (): number => {
+  const birthday = {
+    year: 1993,
+    month: 11,
+    date: 8,
+  };
+  const today = new Date();
+  const thisYearsBirthday = new Date(
+    today.getFullYear(),
+    birthday.month - 1,
+    birthday.date
+  );
+  let age = today.getFullYear() - birthday.year;
+  if (today < thisYearsBirthday) age--;
+
+  return age;
+};
 
 CommonBeforeRouteEnter();
 </script>
