@@ -2,6 +2,8 @@
 
 フリーランスエンジニア Suzuki.s のポートフォリオサイトです。
 
+https://techkinoko.com
+
 VSCode 風の UI にしてみました。
 
 ## 使用技術
