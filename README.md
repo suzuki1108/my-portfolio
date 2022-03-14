@@ -12,11 +12,4 @@ VSCode 風の UI にしてみました。
 - TypeScript
 - script setup
 - provide inject
-
-## 更新方法（備忘録）
-
-```
-$ cd my-portfolio
-$ npm run build
-$ git push ~~
-```
+- GitHub Action(自動ビルド/自動デプロイ)
