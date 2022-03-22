@@ -5,9 +5,9 @@
       <p
         @click="isShowDirectory = !isShowDirectory"
         class="explorer__menu-title"
+        :data-show-directory="isShowDirectory"
       >
-        <span>{{ isShowDirectory ? "∨ " : "> " }}</span
-        >SUZUKI'S-PORTFOLIO
+        SUZUKI'S-PORTFOLIO
       </p>
       <div class="explorer__menu-item" v-if="isShowDirectory">
         <router-link
@@ -65,6 +65,15 @@ const addTab = (item: Display) => {
   margin: 12px 0 0 12px;
   font-size: 12px;
   color: rgb(144, 144, 144);
+}
+
+.explorer__menu-title::before {
+  display: inline-block;
+  content: ">";
+}
+
+.explorer__menu-title[data-show-directory="true"]::before {
+  transform: rotate(90deg);
 }
 
 .explorer__menu {
