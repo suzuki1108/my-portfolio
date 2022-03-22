@@ -11,7 +11,7 @@
     data-last-entry="4"
     data-is-first-page="true"
   >
-    <h2>## お問い合わせ</h2>
+    <h2>## Contact</h2>
     <span v-if="validateResult !== ''" class="error">{{ validateResult }}</span>
     <div class="form-wrapper">
       <div class="form__item">
