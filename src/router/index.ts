@@ -8,27 +8,27 @@ import PersonalDevelop from "@/views/PersonalDevelop.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Profile",
+    name: "プロフィール",
     component: Profile,
   },
   {
     path: "/skillset",
-    name: "SkillSet",
+    name: "スキルセット",
     component: SkillSet,
   },
   {
     path: "/personaldevelop",
-    name: "PersonalDevelop",
+    name: "個人開発",
     component: PersonalDevelop,
   },
   {
     path: "/jobcareer",
-    name: "JobCareer",
+    name: "職務経歴",
     component: JobCareer,
   },
   {
     path: "/contact",
-    name: "Contact",
+    name: "お問い合わせ",
     component: Contact,
   },
 ];
