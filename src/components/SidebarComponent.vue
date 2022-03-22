@@ -3,6 +3,7 @@
     <div class="sidebar-icons">
       <fa
         :icon="props.isShowExplorer ? 'xmark' : 'bars'"
+        :data-icon-xmark="props.isShowExplorer"
         class="fa-icon fa-icon_current"
         @click="$emit('sidebar_toggle')"
       />
@@ -52,6 +53,10 @@ const props = defineProps({
   font-size: 26px;
   padding: 8px 0;
   color: rgb(122, 122, 122);
+}
+
+.fa-icon[data-icon-xmark="true"] {
+  padding: 8px 14px;
 }
 
 .fa-icon_current {
