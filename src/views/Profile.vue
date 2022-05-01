@@ -35,8 +35,6 @@
 </template>
 
 <script setup lang="ts">
-import { CommonBeforeRouteEnter } from "@/Logic/CommonBeforeRouteEnter";
-
 const age = (): number => {
   const birthday = {
     year: 1993,
@@ -54,8 +52,6 @@ const age = (): number => {
 
   return age;
 };
-
-CommonBeforeRouteEnter();
 </script>
 
 <style scoped>

@@ -3,6 +3,10 @@
     <h2 class="jobcareer">## Job Career</h2>
     <div class="jobcareer">
       <div class="jobcareer-item">
+        <h2 class="jobcareer-item__title">フリーランスエンジニア</h2>
+        <p>2022/4 ~</p>
+      </div>
+      <div class="jobcareer-item">
         <h2 class="jobcareer-item__title">自社開発/SES会社 PG</h2>
         <p>2022/1 ~ 2022/3</p>
       </div>
@@ -27,12 +31,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { CommonBeforeRouteEnter } from "@/Logic/CommonBeforeRouteEnter";
-
-CommonBeforeRouteEnter();
-</script>
 
 <style scoped>
 .jobcareer-wrapper {

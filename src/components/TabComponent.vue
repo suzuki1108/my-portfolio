@@ -21,11 +21,11 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, inject } from "vue";
+import { ComputedRef, inject } from "vue";
 import { Display } from "@/types/Display";
 
 const displayTab = inject<Display[]>("DisplayTab");
-const currentRoute = inject<Ref<string>>("currentRoute");
+const currentRoute = inject<ComputedRef<string>>("currentRoute");
 </script>
 
 <style scoped>

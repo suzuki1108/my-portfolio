@@ -38,4 +38,14 @@ const router = createRouter({
   routes,
 });
 
+router.beforeEach((to, from, next) => {
+  if (routes.find((i) => i.path === to.fullPath)) {
+    next();
+    return;
+  }
+
+  // 存在しないパスへの遷移はルートへリダイレクト
+  next("/");
+});
+
 export default router;

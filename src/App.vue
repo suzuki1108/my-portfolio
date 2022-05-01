@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import BaseLayout from "@/components/BaseLayout.vue";
-import { provide, reactive, Ref, ref } from "vue";
+import { provide, reactive, ComputedRef, computed } from "vue";
 import { Display } from "@/types/Display";
 import router from "./router";
 import { useRoute } from "vue-router";
@@ -20,18 +20,23 @@ const display = reactive<Display[]>(
   })
 );
 
-const displayTab = reactive<Display[]>([
-  {
-    route: display[0].route,
-    title: display[0].title,
-  },
-]);
+const currentRoute = computed(() => {
+  return route.path;
+});
 
-const currentRoute = ref(route.path);
+const getInitDisplayTab = (): Display => {
+  const initDisplay = display.find((i) => i.route === location.pathname);
+  return {
+    route: initDisplay?.route || "/",
+    title: initDisplay?.title || "プロフィール",
+  };
+};
+
+const displayTab = reactive<Display[]>([getInitDisplayTab()]);
 
 provide<Display[]>("Display", display);
 provide<Display[]>("DisplayTab", displayTab);
-provide<Ref<string>>("currentRoute", currentRoute);
+provide<ComputedRef<string>>("currentRoute", currentRoute);
 </script>
 
 <style></style>

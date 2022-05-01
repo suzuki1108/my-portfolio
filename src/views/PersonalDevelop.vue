@@ -10,7 +10,7 @@
             概要:
             VSCode風のポートフォリオサイト(本サイト)。突貫工事的に作成したため、随時リファクタ予定。
           </p>
-          <p>技術: Vue.js 3系 / TypeScript</p>
+          <p>技術: Vue.js 3系 / provide inject / TypeScript / GitHubActions</p>
         </div>
       </div>
       <div class="develop-item">
@@ -69,12 +69,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { CommonBeforeRouteEnter } from "@/Logic/CommonBeforeRouteEnter";
-
-CommonBeforeRouteEnter();
-</script>
 
 <style scoped>
 .develop-wrapper {

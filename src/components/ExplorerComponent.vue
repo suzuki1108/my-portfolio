@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
 import { defineProps, ref } from "vue";
-import { Ref, inject } from "vue";
+import { ComputedRef, inject } from "vue";
 import { Display } from "@/types/Display";
 
 const props = defineProps({
@@ -38,7 +38,7 @@ const props = defineProps({
 
 const display = inject<Display[]>("Display");
 const displayTab = inject<Display[]>("DisplayTab");
-const currentRoute = inject<Ref<string>>("currentRoute");
+const currentRoute = inject<ComputedRef<string>>("currentRoute");
 
 const isShowDirectory = ref(true);
 
@@ -47,7 +47,7 @@ const addTab = (item: Display) => {
 
   if (displayTab[0].route === "/" && item.route === "/") return;
 
-  if (!displayTab.includes(item)) displayTab.push(item);
+  if (!displayTab.find((i) => i.route === item.route)) displayTab.push(item);
 };
 </script>
 
