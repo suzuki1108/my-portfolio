@@ -10,7 +10,7 @@
       <a href="https://github.com/suzuki1108/">
         <fa :icon="['fab', 'github']" class="fa-icon" />
       </a>
-      <a href="https://techkinoko.com/">
+      <a href="https://qiita.com/suzuki1108">
         <fa icon="blog" class="fa-icon" />
       </a>
     </div>
